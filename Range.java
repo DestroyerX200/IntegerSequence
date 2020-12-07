@@ -23,7 +23,7 @@ public class Range implements IntegerSequence {
   		return current - 1;
   	}
   	else {
-  		throw new NoSuchElementException("IntegerSequence " + this + "does not contain " + current);
+  		throw new NoSuchElementException("IntegerSequence " + this + " does not contain element " + current);
   	}
   }
   
