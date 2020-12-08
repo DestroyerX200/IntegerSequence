@@ -15,12 +15,18 @@ public class ArraySequence implements IntegerSequence {
   	return data.length <= currentIndex && currentIndex <= data.length;
   }
   public int next() {
-  	return 0;
+  	if (hasNext()) {
+  		currentIndex++;
+  		return currentIndex - 1;
+  	}
+  	else {
+  		throw new NoSuchElementException("IntegerSequence " + this + " does not contain an element at index " + currentIndex);
+  	}
   }
   public int length() {
-  	return 0;
+  	return data.length;
   }
   public void reset() {
-  	
+  	currentIndex = 0;
   }
 }
