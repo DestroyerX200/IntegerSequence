@@ -34,6 +34,7 @@ public class ArraySequence implements IntegerSequence {
   	for (int i = 0; i < otherseq.length(); i++) {
   		data[i] = otherseq.next();
   	}
+  	otherseq.reset();
   	reset();
   }
 }
