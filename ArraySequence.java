@@ -14,4 +14,13 @@ public class ArraySequence implements IntegerSequence {
   public boolean hasNext() {
   	return data.length <= currentIndex && currentIndex <= data.length;
   }
+  public int next() {
+  	return 0;
+  }
+  public int length() {
+  	return 0;
+  }
+  public void reset() {
+  	
+  }
 }
