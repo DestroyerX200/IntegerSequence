@@ -20,6 +20,21 @@ public class Tester {
 	      }
 	    }
 	    System.out.println();
-	    r.next(); // should throw NoSuchElementException error
+	    //r.next(); // should throw NoSuchElementException error
+
+	    int[]nums = {1,3,5,0,-1,3,9};
+	    IntegerSequence as = new ArraySequence(nums);
+
+	    System.out.println("ArraySequence(array):");
+	    while(as.hasNext()) {
+	      System.out.print(as.next()+", ");
+	    }
+	    
+	    System.out.println();
+	    as.reset();
+	    System.out.println("ArraySequence(array):");
+	    while(as.hasNext()) {
+	      System.out.print(as.next()+", ");
+	    }
 	}
 }

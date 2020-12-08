@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 public class ArraySequence implements IntegerSequence {
-  private int currentIndex;
+  public int currentIndex;
   private int[] data;
 
   /*Construct the sequence by copying values from the other array into the data array*/
@@ -12,12 +12,12 @@ public class ArraySequence implements IntegerSequence {
   	}
   }
   public boolean hasNext() {
-  	return data.length <= currentIndex && currentIndex <= data.length;
+  	return 0 <= currentIndex && currentIndex < data.length;
   }
   public int next() {
   	if (hasNext()) {
   		currentIndex++;
-  		return currentIndex - 1;
+  		return data[currentIndex - 1];
   	}
   	else {
   		throw new NoSuchElementException("IntegerSequence " + this + " does not contain an element at index " + currentIndex);
