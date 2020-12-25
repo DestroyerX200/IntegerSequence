@@ -39,6 +39,7 @@ public class Tester {
 	    
 	    System.out.println();
 	    IntegerSequence r = new Range(10,20);
+	    r.next();
 	    IntegerSequence as = new ArraySequence(r);
 	   
 	    System.out.println("ArraySequence(seq):");

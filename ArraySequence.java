@@ -30,7 +30,8 @@ public class ArraySequence implements IntegerSequence {
   	currentIndex = 0;
   }
   public ArraySequence(IntegerSequence otherseq){
-  	data = new int[otherseq.length()];
+  	otherseq.reset();
+    data = new int[otherseq.length()];
   	for (int i = 0; i < otherseq.length(); i++) {
   		data[i] = otherseq.next();
   	}
